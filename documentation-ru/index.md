@@ -1,67 +1,41 @@
 # Введение
 
-In this manual we document a chaos engineering (CE) process the way it 
-can work in an industrial-grade practice. We provide failure
-cases and patterns to fix them.
-
-## Где применяется // Scope
-
 !!! Требуется_обсуждение
-    Этот раздел не переводим, нужно его обсуждение.
+    Надо проговорить этот раздел.
 
+В этом руководстве мы описываем процесс сhaos engineering (CE), в том виде как он применяется в крупных высоконагруженных системах. Мы разбираем конкретные случаи поиска и устранения сбоев и рассказываем о работе команды, которая занимается  повышением надежности ИТ-систем.
 
-CE done right has a great impact on reliability of highload 
-IT services. But it is an advanced and costly technique.
-There several things that have to be in place before CE
-may strive, including proper monitoring and explicit reliability 
-objectives.
+## Где применяется 
 
-In our opinion CE is most relevant for:
+Правильно выполненный сhaos engineering большое влияние на надежность высокопроизводительных ИТ-услуг. Но это передовой и дорогостоящий (по времени, компетенциям, согласованиям) метод. Мы считаем, что сhaos engineering актуален в следующих случаях: 
 
-- highload projects (benefits > cost of implementation)
-- actively maintained (you can both detect and fix a vulnerability)
-- distributed system (fewer things break in a monolith)
-- ready mindsets (the team attaches value to system reliability and is willing to allocate time and resources to keep it up)
+- проекты с высокой нагрузкой или сложной арзхитектурой, в которых выигрыши превышают стоимость работ по тестированию
+- проекты, которые активно поддерживаются (если некому утранять уязвимости, нет смысла тестировать)
+- распределенных системах (в монолитах ломаться всего будет меньше) 
+- в случаях, когда надежность важна для клиентов и владельцев системы (причем не на словах)
 
-Не очень подходит для маленьких компаний с 4 разработчиками
-(изучать можно, но на маленькой ИТ-системе выигрыши будут небольшие).
-
-Мы считаем, что уже знакомы с CE и заинтересованы в имплементации.
-О вопросе CE или не CE - v10n.com
+Сhaos engineering не очень подходит для компании с 4 разработчиками и двумя серверами, поскольку в маленькой ИТ-системе выигрыши, скорее всего, будут небольшими. 
 
 ## Для кого это руководство
 
-This manual is for those who practice chaos engineering
-and have specific "How do I?" questions. We target the teams that have tried some fault injections 
-and are not fully satisfied with the progress. 
+Это руководство предназначено, в первую очередь, для тех, кто уже сделал первые шаги в chaos engineering и у есть кого накопились практические вопросы о том, как двигаться дальше. Мы ориентируемся на команды, которые уже попробовали какие-то тесты с fault injection и планируют развивать это направление работы.
 
+Первые тесты часто приносят разочарование. Зачем вообще «ломать» систему, если она и так худо-бедно работает? Что именно мы показали этими тестами? Что именно мы протестировали? Кто и как будет заниматься доработкой системы? И несмотря на всю неопределённость уже сейчас нужно принять какие-то нетривиальные, сложные решения и быть готовым, что все получится не сразу.
 
-We've been at that point and know the frustration of trying to pull too many pieces together and pressure to make complex decisions. The battle-tested solutions we came up to over few years are described in this manual. We hope they can be useful fo your chaos engineering team.
+Мы надеемся, что наше описание шагов и методик, проверенных в течение нескольких лет работы в области chaos engineering, позволит вам избежать хотя бы некоторых ошибок, сэкономит время на планирование и реализацию тестов, и позволит вам быстрее добиваться поставленных результатов в области повышения надежности ИТ-систем и сервисов.
 
 ## Что внутри
 
-The core of our manual is [CE process description](process.md). It outlines 
-the starting points and outcomes of chaos engineering and relations of CE 
-to other devops and business domain processes.
-
-The [injections section](injections.md) is a body of knowledge that helps 
-to categorise vulnerabilities and to design tests. We provide failure
-cases and patterns to fix them.
-
-We also maintain a [glossary](glossary.md) of terms to help 
-navigate terminlogy and some specific CE slang.
+- Основой нашего руководства является описание процесса сhaos engineering, включая его отправные точки и результаты, а также взаимосвязь с другими процессами в компании. См. раздел ["Шаги"](process.md). 
+- Раздел ["Проблемы и решения"](injections.md) - это тот объем знаний, который помогает классифицировать уязвимости, анализровать ИТ-систему и разрабатывать к ней тесты. Мы предоставляем случаи сбоев и способы их устранения.
+- Мы также ведем [словарь терминов](glossary.md), чтобы помочь ориентироваться специфическом сленге CЕ и снимать разночтения.
 
 ## Особенности подхода
 
-Things we present are not dark magic. They are not about 
-buying into any expensive stuff. They are about sensible steps 
-in acquiring competences and changing your own workflow
-and interactions with other teams. 
+То, о чем мы рассказываем – не какая-то темная магия. Это также не реклама какого-то дополнительного софта. Мы считаем, что основные результаты в chaos engineering достигаются путем приобретения новых навыков персонала и организационных изменениях в процессах работы. 
 
-Getting more 9's is a journey, not a single act, so let's start!
+Получить много девяток в показатель надежности - это не единовременный подвиг, а целое увлекательное, хотя и трудное путешествие. Приглашаем его пройти!
 
 ## Авторы
 
-This manual is written by [Dmitry Yakubovsky (Sberbank)](https://twitter.com/d_yakubovsky) 
-and [Evgeniy Pogrebnyak (MGIMO)](https://twitter.com/PogrebnyakE).  
-
+Это руководство написано [Дмитрием Якубовским (Сбербанк)](https://twitter.com/d_yakubovsky) и [Евгением Погребняком (МГИМО)](https://twitter.com/PogrebnyakE).
