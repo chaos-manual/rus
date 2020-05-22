@@ -6,6 +6,10 @@ cases and patterns to fix them.
 
 ## Где применяется // Scope
 
+!!! Требуется_обсуждение
+    Этот раздел не переводим, нужно его обсуждение.
+
+
 CE done right has a great impact on reliability of highload 
 IT services. But it is an advanced and costly technique.
 There several things that have to be in place before CE
@@ -36,11 +40,13 @@ We've been at that point and know the frustration of trying to pull too many pie
 
 ## Что внутри руководства
 
-The core of our manual is CE [process description](process.md). It outlines the starting points and outcomes of chaos engineering and relations of CE to other software engineering/devops/business processes.
+The core of our manual is [CE process description](process.md). It outlines 
+the starting points and outcomes of chaos engineering and relations of CE 
+to other devops and business domain processes.
 
 The [injections section](injections.md) is a body of knowledge that helps 
-to categorise vulnerabilities, design tests. We offer a few 
-examples and common patterns to fix your system.
+to categorise vulnerabilities and to design tests. We provide failure
+cases and patterns to fix them.
 
 We also maintain a [glossary](glossary.md) of terms to help 
 navigate terminlogy and some specific CE slang.
@@ -58,3 +64,4 @@ Getting more 9's is a journey, not a single act, so let's start!
 
 This manual is written by [Dmitry Yakubovsky (Sberbank)](https://twitter.com/d_yakubovsky) 
 and [Evgeniy Pogrebnyak (MGIMO)](https://twitter.com/PogrebnyakE).  
+
