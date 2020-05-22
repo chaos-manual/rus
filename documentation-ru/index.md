@@ -45,7 +45,7 @@ examples and common patterns to fix your system.
 We also maintain a [glossary](glossary.md) of terms to help 
 navigate terminlogy and some specific CE slang.
 
-## Наш подход
+## Особенности подхода
 
 Things we present are not dark magic. They are not about 
 buying into any expensive stuff. They are about sensible steps 

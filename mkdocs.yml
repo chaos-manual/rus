@@ -30,6 +30,10 @@ repo_url: https://github.com/chaos-manual/rus
 edit_uri: '/chaos-manual/rus/edit/master/documentation-ru/'
 
 
+# Copyright
+copyright: Copyright &copy; 2020 Dmitry Yakubovsky, Evgeniy Pogrebnyak
+
+
 # Configuration
 theme:
   name: material
