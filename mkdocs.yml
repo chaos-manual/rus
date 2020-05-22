@@ -1,35 +1,32 @@
 site_name: Chaos Engineering Manual
 
-
 nav:
   - Введение: index.md
   - Шаги: 
     - Этапы работы: process.md    
     - 1. Подготовка тестов: process.md    
     - 2. Испытания: process.md    
-    - 3. "Что после тестов": process.md    
+    - 3. После тестов: process.md    
   - Проблемы и решения:
     - Атаки: injections.md
   - Кейсы:    
-    - Out-of-memory: empty.md
-  - Глоссарий:
-    - Слова : glossary.md
+    - Out-of-memory: cases/out-of-memory.md
+  - Термины:
+    - Глоссарий: glossary.md
     - Сокращения : glossary.md
-  - TODO: todo.md
+  - Задать вопрос:    
+    - Контакты : ask.md 
+  - TODO: 
+    - todo: todo/this.md  
 
 
-theme:
-  name: material
-  features:
-    - tabs
 
-docs_dir: documentation
+docs_dir: documentation-ru
 site_dir: docs
 
-
-repo_name: chaos-manual/docs
+repo_name: chaos-manual/rus
 repo_url: https://github.com/chaos-manual/docs
-edit_uri: '/chaos-manual/docs/edit/master/documentation/'
+edit_uri: '/chaos-manual/rus/edit/master/documentation/'
 
 
 # Configuration
@@ -119,29 +116,3 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
-# # Page tree
-# nav:
-#   - Home: index.md
-#   - Getting started: getting-started.md
-#   - Extensions:
-#     - Admonition: extensions/admonition.md
-#     - CodeHilite: extensions/codehilite.md
-#     - Footnotes: extensions/footnotes.md
-#     - Metadata: extensions/metadata.md
-#     - Permalinks: extensions/permalinks.md
-#     - PyMdown: extensions/pymdown.md
-#   - Plugins:
-#     - Search: plugins/search.md
-#     - Minification: plugins/minification.md
-#     - Revision date: plugins/revision-date.md
-#     - Awesome pages: plugins/awesome-pages.md
-#   - Releases:
-#     - Upgrading to 5.x: releases/5.md
-#     - Upgrading to 4.x: releases/4.md
-#     - Changelog: releases/changelog.md
-#   - Customization: customization.md
-#   - Data privacy: data-privacy.md
-#   - Contributing: contributing.md
-#   - License: license.md
-
