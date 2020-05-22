@@ -7,7 +7,7 @@ cases and patterns to fix them.
 ## Где применяется // Scope
 
 !!! Требуется_обсуждение
-    Этот раздел не переводим, нужно его обсуждение.
+    Этот подраздел не переводим, нужно его обсуждение.
 
 
 CE done right has a great impact on reliability of highload 

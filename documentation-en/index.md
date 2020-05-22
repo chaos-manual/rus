@@ -1,35 +1,19 @@
-# Introduction
+# Введение
 
-We document a chaos engineering (CE) process the way it 
-can work in an industrial-grade practice. 
+In this manual we document a chaos engineering (CE) process the way it 
+can work in an industrial-grade practice. We provide failure
+cases and patterns to fix them.
 
-We fully describe a battle-tested implementation 
-and give our reasoning why it works well. This should be 
-a good starting point for those just introducing 
-or experimenting with chaos engineering. Next, we provide
-recommendations for more advanced users, based on your 
-feedback and questions.
+## Где применяется CE
 
-Things we present are not dark magic. They are not about 
-buying into any expensive stuff. They are about sensible steps 
-in acquiring competences and changing your workflow. As a result 
-your IT system is more reliable and your team gets more confident 
-and prepared.
+!!! Требуется_обсуждение
+    Этот подраздел не переводим, нужно его обсуждение.
 
-Getting more 9's is a journey, not a single act, so let's start!
-
-## Section annotations
-
-The core of our manual is CE [process description](process.md). It outlines the starting points and outcomes of chaos engineering and relations of CE to other software engineering/devops/business processes.
-
-The [injections section](injections.md) is a body of knowledge that helps 
-to categorise vulnerabilities, design tests. we also offer a few 
-examples and common patterns to fix your system.
-
-We also maintain a [glossary](glossary.md) of terms to help 
-navigate terminlogy and some specific CE slang more easily.
-
-## Who can use this manual?
+CE done right has a great impact on reliability of highload 
+IT services. But it is an advanced and costly technique.
+There several things that have to be in place before CE
+may strive, including proper monitoring and explicit reliability 
+objectives.
 
 In our opinion CE is most relevant for:
 
@@ -41,22 +25,42 @@ In our opinion CE is most relevant for:
 Не очень подходит для маленьких компаний с 4 разработчиками
 (изучать можно, но на маленькой ИТ-системе выигрыши будут небольшие).
 
-## Authors
+Мы считаем, что уже знакомы с CE и заинтересованы в имплементации.
+О вопросе CE или не CE - v10n.com
+
+## Для кого это руководство
+
+This manual is for those who practice chaos engineering
+and have specific "How do I?" questions. We target the teams that have tried some fault injections 
+and are not fully satisfied with the progress. 
+
+
+We've been at that point and know the frustration of trying to pull too many pieces together and pressure to make complex decisions. The battle-tested solutions we came up to over few years are described in this manual. We hope they can be useful fo your chaos engineering team.
+
+## Что внутри руководства
+
+The core of our manual is [CE process description](process.md). It outlines 
+the starting points and outcomes of chaos engineering and relations of CE 
+to other devops and business domain processes.
+
+The [injections section](injections.md) is a body of knowledge that helps 
+to categorise vulnerabilities and to design tests. We provide failure
+cases and patterns to fix them.
+
+We also maintain a [glossary](glossary.md) of terms to help 
+navigate terminlogy and some specific CE slang.
+
+## Особенности подхода
+
+Things we present are not dark magic. They are not about 
+buying into any expensive stuff. They are about sensible steps 
+in acquiring competences and changing your own workflow
+and interactions with other teams. 
+
+Getting more 9's is a journey, not a single act, so let's start!
+
+## Авторы
 
 This manual is written by [Dmitry Yakubovsky (Sberbank)](https://twitter.com/d_yakubovsky) 
 and [Evgeniy Pogrebnyak (MGIMO)](https://twitter.com/PogrebnyakE).  
 
-## Feedback from the readers
-
-We anticipate some questions from the readers. 
-Please do ask! This will help us make the manual better.
-
-- What software should I use?
-- How do we sell chaos engineering inside our organisation?
-- Does chaos engineering help for smaller systems?
-
-Please leave a note or question in [Github issues](https://github.com/epogrebnyak/chaos-manual/issues).
-
-You can also follow us or DM [on Twitter](https://twitter.com/v10n10).
-
-<!-- Slack channel is also an option. -->
