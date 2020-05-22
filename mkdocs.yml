@@ -26,7 +26,7 @@ docs_dir: documentation-ru
 site_dir: docs
 
 repo_name: chaos-manual/rus
-repo_url: https://github.com/chaos-manual/docs
+repo_url: https://github.com/chaos-manual/rus
 edit_uri: '/chaos-manual/rus/edit/master/documentation-ru/'
 
 
