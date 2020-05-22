@@ -1,0 +1,147 @@
+site_name: Chaos Engineering Manual
+
+
+nav:
+  - Введение: index.md
+  - Шаги: 
+    - Этапы работы: process.md    
+    - 1. Подготовка тестов: process.md    
+    - 2. Испытания: process.md    
+    - 3. "Что после тестов": process.md    
+  - Проблемы и решения:
+    - Атаки: injections.md
+  - Кейсы:    
+    - Out-of-memory: empty.md
+  - Глоссарий:
+    - Слова : glossary.md
+    - Сокращения : glossary.md
+  - TODO: todo.md
+
+
+theme:
+  name: material
+  features:
+    - tabs
+
+docs_dir: documentation
+site_dir: docs
+
+
+repo_name: chaos-manual/docs
+repo_url: https://github.com/chaos-manual/docs
+edit_uri: '/chaos-manual/docs/edit/master/documentation/'
+
+
+# Configuration
+theme:
+  name: material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: ru
+  features:
+    - tabs
+    #- instant
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  # icon:
+  #   logo: logo
+  # favicon: assets/favicon.png
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+# # Customization
+# extra:
+#   social:
+#     - icon: fontawesome/brands/github
+#       link: https://github.com/squidfunk
+#     - icon: fontawesome/brands/gitter
+#       link: https://gitter.im/squidfunk/mkdocs-material
+#     - icon: fontawesome/brands/docker
+#       link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+#     - icon: fontawesome/brands/twitter
+#       link: https://twitter.com/squidfunk
+#     - icon: fontawesome/brands/linkedin
+#       link: https://linkedin.com/in/squidfunk/
+#     - icon: fontawesome/brands/instagram
+#       link: https://instagram.com/squidfunk
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  #- pymdownx.emoji:
+  #    emoji_index: !!python/name:materialx.emoji.twemoji
+  #    emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.highlight:
+  #     linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# # Page tree
+# nav:
+#   - Home: index.md
+#   - Getting started: getting-started.md
+#   - Extensions:
+#     - Admonition: extensions/admonition.md
+#     - CodeHilite: extensions/codehilite.md
+#     - Footnotes: extensions/footnotes.md
+#     - Metadata: extensions/metadata.md
+#     - Permalinks: extensions/permalinks.md
+#     - PyMdown: extensions/pymdown.md
+#   - Plugins:
+#     - Search: plugins/search.md
+#     - Minification: plugins/minification.md
+#     - Revision date: plugins/revision-date.md
+#     - Awesome pages: plugins/awesome-pages.md
+#   - Releases:
+#     - Upgrading to 5.x: releases/5.md
+#     - Upgrading to 4.x: releases/4.md
+#     - Changelog: releases/changelog.md
+#   - Customization: customization.md
+#   - Data privacy: data-privacy.md
+#   - Contributing: contributing.md
+#   - License: license.md
+
