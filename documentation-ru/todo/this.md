@@ -8,14 +8,16 @@ This list will be removed from a release version, keeping here for now.
 - two language versions (in Russian as we discuss, English for wider community)
 - there is one lang per repo with mkdocs
 
-## Priority
+## Review
+
+* [ ] Голосование про какие атаки вы хотите узнать в первую очередь?
+
+## Темы для v 0.1
 
 * [ ] Pick topics for v 0.1
     * [x] Scope (Who can use this manual?)
     * [x] Process - центральное описнаие в чем состоит процесс
     * [x] Types of incidents
-* [ ] Show to some readers
-* [ ] Голосование про какие атаки вы хотите узнать в первую очередь?
 
 ## Кому рассказываем
 
@@ -25,8 +27,9 @@ This list will be removed from a release version, keeping here for now.
 
 ## Site theme:
 
-- [ ] украшения, "admonitions"
+- [ ] зачеркнутый текст
 - [ ] эмблемка twitter из шритфов
+- [x] [украшения, "admonitions"](https://squidfunk.github.io/mkdocs-material/extensions/admonition/)
 - [x] горизонтальное меню https://github.com/squidfunk/mkdocs-material/issues/1693#issuecomment-632482975
 - [x] как вести две языковые версии?
 - [x] docs folder vs gh-pages branch for Github Pages (gh-pages no longer an option)
