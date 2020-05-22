@@ -38,7 +38,7 @@ and are not fully satisfied with the progress.
 
 We've been at that point and know the frustration of trying to pull too many pieces together and pressure to make complex decisions. The battle-tested solutions we came up to over few years are described in this manual. We hope they can be useful fo your chaos engineering team.
 
-## Что внутри руководства
+## Что внутри
 
 The core of our manual is [CE process description](process.md). It outlines 
 the starting points and outcomes of chaos engineering and relations of CE 
