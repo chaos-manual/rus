@@ -17,7 +17,8 @@ nav:
   - Задать вопрос:    
     - Контакты : ask.md 
   - TODO: 
-    - todo: todo/this.md  
+    - this: todo/this.md  
+    - v10n: todo/v10m.md 
 
 
 
@@ -26,7 +27,7 @@ site_dir: docs
 
 repo_name: chaos-manual/rus
 repo_url: https://github.com/chaos-manual/docs
-edit_uri: '/chaos-manual/rus/edit/master/documentation/'
+edit_uri: '/chaos-manual/rus/edit/master/documentation-ru/'
 
 
 # Configuration
