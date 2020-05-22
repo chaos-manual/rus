@@ -1,4 +1,4 @@
 # chaos-manual
-Production-grade methodology for chaos engineering implementation.
+Русскоязычная версия руководства по хаос-инжинирингу
 
-Live at https://chaos-manual.github.io/rus
+Сайт: https://chaos-manual.github.io/rus
