@@ -1,5 +1,8 @@
 # Feedback from the readers
 
+Next, we provide recommendations for more advanced 
+users, based on your feedback and questions.
+
 We anticipate some questions from the readers. 
 Please do ask! This will help us make the manual better.
 
