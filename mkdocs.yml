@@ -4,9 +4,9 @@ nav:
   - Введение: index.md
   - Шаги: 
     - Этапы работы: process.md    
-    - 1. Подготовка тестов: process.md    
-    - 2. Испытания: process.md    
-    - 3. После тестов: process.md    
+    - 1. Подготовка тестов: steps/incidents.md    
+    - 2. Испытания: empty.md    
+    - 3. После тестов: empty.md    
   - Проблемы и решения:
     - Атаки: injections.md
   - Кейсы:    
@@ -14,12 +14,10 @@ nav:
   - Термины:
     - Глоссарий: glossary.md
     - Сокращения : glossary.md
+  - Выигрыши:
+    - В чем profit: profit.md    
   - Задать вопрос:    
     - Контакты : ask.md 
-  - TODO: 
-    - this: todo/this.md  
-    - v10n: todo/v10n.md 
-
 
 
 docs_dir: documentation-ru
