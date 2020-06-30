@@ -63,6 +63,8 @@ theme:
 # Plugins
 plugins:
   - search
+  - pdf-export:
+      combined: true
   - minify:
       minify_html: true
 
